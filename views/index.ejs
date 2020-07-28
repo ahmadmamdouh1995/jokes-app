@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+        <a href="/random">Random Joke</a>
+    </header>
+    <main>
+        <%data.forEach(value=>{%>
+            <h3><%=value.id%></h3>
+            <h2><%=value.type%></h2>
+            <p><%=value.setup%></p>
+            <h4><%=value.punchline%></h4>
+            <form action="/list" method="GET">
+                <input type="hidden" value="<%=value.type%>" name="type">
+                <input type="hidden" value="<%=value.setup%>" name="setup">
+                <input type="hidden" value="<%=value.punchline%>" name="punchline">
+                <input type="submit" value="Add-to-my-jokes-list button">
+            </form>
+            <%})%>
+    </main>
+    
+</body>
+</html>

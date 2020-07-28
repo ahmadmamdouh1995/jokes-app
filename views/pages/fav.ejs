@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected</title>
+</head>
+
+<body>
+    <header>
+        <h1>Selected</h1>
+    </header>
+    <main>
+        <%data.forEach(value=>{%>
+        <h2><%=value.type%></h2>
+        <p><%=value.setup%></p>
+        <h4><%=value.punchline%></h4>
+        <a href="details/<%=value.id%>"><button>View-Details</button></a>
+        <%})%>
+    </main>
+
+</body>
+
+</html>

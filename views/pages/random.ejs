@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+    <header><h1>Random</h1></header>
+    <main>
+        <%data.forEach(value=>{%>
+            <h3><%=value.id%></h3>
+            <h2><%=value.type%></h2>
+            <p><%=value.setup%></p>
+            <h4><%=value.punchline%></h4>
+            <%})%>
+    </main>
+    
+</body>
+</html>
